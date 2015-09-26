@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "5.0"
   s.osx.deployment_target = "10.7"
-
+  
   s.source_files = "FontAwesomeIconFactory/*.{h,m}"
   s.ios.source_files = "FontAwesomeIconFactory/iOS/*.{h,m}"
   s.osx.source_files = "FontAwesomeIconFactory/OSX/*.{h,m}"
@@ -32,4 +32,8 @@ Pod::Spec.new do |s|
   s.ios.frameworks = "CoreText", "CoreGraphics"
   s.osx.frameworks = "CoreText", "CoreGraphics", "ApplicationServices"
 
+  s.subspec 'Watch' do |cs|
+    cs.watchos.deployment_target = '2.0'
+	cs.resource = "Font-Awesome/fonts/FontAwesome.otf"
+  end
 end
